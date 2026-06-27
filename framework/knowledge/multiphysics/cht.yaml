@@ -1,0 +1,7 @@
+Conjugate Heat Transfer:
+couples:
+  - fluid convection
+  - solid conduction
+
+COMSOL:
+Heat Transfer in Solids + Fluids

@@ -1,0 +1,7 @@
+Fluid Structure Interaction:
+couples:
+  - Navier Stokes
+  - Solid Mechanics
+
+stability:
+  - time step sensitive

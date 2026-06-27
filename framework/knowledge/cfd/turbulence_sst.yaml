@@ -1,0 +1,6 @@
+k-omega SST:
+use:
+  - separation
+  - external flow
+risk:
+  - mesh sensitivity
