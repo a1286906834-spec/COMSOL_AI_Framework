@@ -23,3 +23,10 @@ Output must include:
 2. coupling mechanism
 3. numerical stability check
 4. COMSOL implementation plan
+
+Framework loading rule:
+Before starting any COMSOL task, read all files under:
+`D:\Desktop\COMSOL for codex\framework`
+#the path is the gen mulu of the codex workspace#
+
+This includes all nested `.md`, `.yaml`, `.yml`, and `.py` files. Treat the loaded framework files as project instructions for the current task, and do not assume their contents are known in a new conversation until they have been read again.
