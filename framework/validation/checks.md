@@ -1,4 +1,0 @@
-- mass conservation
-- energy conservation
-- coupling stability
-- mesh independence

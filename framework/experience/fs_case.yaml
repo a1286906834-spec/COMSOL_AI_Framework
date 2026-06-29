@@ -1,3 +1,0 @@
-case: FSI failure
-cause: time step too large
-fix: reduce dt + stabilize coupling

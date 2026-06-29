@@ -1,7 +1,0 @@
-Joule Heating:
-couples:
-  - Electric Currents
-  - Heat Transfer
-
-risk:
-  - strong nonlinear coupling
