@@ -1,0 +1,59 @@
+version: 0.5-skill-optimized
+
+couplings:
+  cfd_heat:
+    type: conjugate_heat_transfer
+    strength: strong
+    variables:
+      - velocity -> convective_heat_transfer
+      - temperature -> density_viscosity_optional
+    comsol:
+      - Heat Transfer in Fluids
+      - Heat Transfer in Solids
+      - Non-Isothermal Flow
+    validation:
+      - energy_balance
+      - interface_heat_flux_continuity
+
+  cfd_structure:
+    type: fluid_structure_interaction
+    strength: strong
+    variables:
+      - pressure -> structural_load
+      - displacement -> fluid_mesh_motion
+    comsol:
+      - Fluid Flow
+      - Solid Mechanics
+      - Moving Mesh
+      - Fluid-Structure Interaction
+    validation:
+      - interface_displacement_continuity
+      - force_balance
+      - mesh_quality_after_deformation
+
+  em_heat:
+    type: joule_heating
+    strength: medium_to_strong
+    variables:
+      - electric_field -> heat_source
+      - temperature -> conductivity_optional
+    comsol:
+      - Electric Currents
+      - Heat Transfer in Solids
+      - Joule Heating
+    validation:
+      - electrical_power_balance
+      - thermal_energy_balance
+
+  heat_structure:
+    type: thermal_expansion
+    strength: weak_to_medium
+    variables:
+      - temperature -> thermal_strain
+    comsol:
+      - Heat Transfer
+      - Solid Mechanics
+      - Thermal Expansion
+    validation:
+      - constraint_reaction_force
+      - stress_singularity_check
